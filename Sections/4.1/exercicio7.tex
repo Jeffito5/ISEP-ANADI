@@ -1,0 +1,24 @@
+\subsection{Exercício 7}
+
+Observamos pelo exercício 6, através da média, que os melhores modelos são a árvore de regressão e a rede neuronal (1). Contudo, iremos comprovar estatisticamente através dos testes: t.test e wilcox.
+
+Após obtermos os dois melhores modelos, pretendemos verificar se são estatisticamente significativos e para isso recorremos a um \textbf{t.test} e um \textbf{wilcox.test}. Utilizando um nível de significância de 5\% e analisando o p-value obtido em cada um dos testes, concluímos que existe uma diferença significativa entre os dois melhores modelos para ambos os testes.
+
+\begin{table}[htbp]
+	\caption{Tabela com valores p-value para o t.test e wilcox.test}
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+      \hline
+       & \textbf{p-value} \\
+      \hline
+      t.test & 1.613e-12\\
+      \hline
+      wilcox.test & 1.083e-05\\
+      \hline
+    \end{tabular}
+    \label{tab_7}
+    \end{center}
+\end{table}
+
+Verificamos que o modelo com melhor desempenho é a rede neuronal de acordo com os valores MAE e RMSE e, através deste exercício, que esta rede é significativamente diferente da árvore de regressão.
+

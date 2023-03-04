@@ -1,0 +1,73 @@
+\subsection{Exercício 9}
+Utilizando o método k-fold, foi-nos solicitado obter a média e o desvio padrão da taxa de acerto da previsão do atributo \textbf{Ativo} com os dois melhores modelos obtidos na alínea anterior.
+Para obter os 2 melhores modelos, verificamos a \textbf{Accuracy} de cada modelo obtendo os seguintes valores:
+
+\begin{table}[htbp]
+	\caption{Comparação de accuracy para os 3 modelos}
+    \begin{center}
+    \begin{tabular}{|c|c|}
+    \hline
+    & \textbf{Accuracy}\\
+    \hline
+    Árvore de Decisão & 80.66\% \\
+    \hline
+    Rede Neuronal & 64\% \\
+    \hline
+    K-vizinhos mais próximos & 80.09\% \\
+    \hline
+    \end{tabular}
+    \label{tab:my_label}
+    \end{center}
+\end{table}
+
+Analisando os valores obtidos, consideramos que o modelo \textbf{Árvore de Decisão} e o modelo \textbf{K-vizinhos mais próximos} são os melhores porque apresentam uma \textbf{accuracy} mais perto de 100\%.
+Realizamos 10 iterações diferentes para os dois modelos e calculamos a média e o desvio-padrão obtendo os valores da seguinte tabela:
+
+\begin{table}[htbp]
+	\caption{10 iterações para obter Accuracy dos dois melhores modelos }
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+        \hline
+        & \textbf{KNN} & \textbf{Árvore de Decisão}\\
+        \hline
+        1 & 0.7718579 & 0.7950820 \\
+        \hline
+        2 & 0.7938719 & 0.8105850 \\
+        \hline
+        3 & 0.7786999 & 0.7883817 \\
+        \hline
+        4 & 0.8029412 & 0.7882353 \\
+        \hline
+        5 & 0.7701149 & 0.7701149 \\
+        \hline
+        6 & 0.7851740 & 0.7776097 \\
+        \hline
+        7 & 0.7747489 & 0.7718795 \\
+        \hline
+        8 & 0.7896213 & 0.7938289 \\
+        \hline
+        9 & 0.7971223 & 0.8000000 \\
+        \hline
+        [0 & 0.7852162 & 0.7880056 \\
+        \hline
+        \end{tabular}
+    \label{tab_9}
+    \end{center}
+\end{table}
+
+
+\begin{table}[htbp]
+	\caption{Valores média e desvio padrão para cada modelo}
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    & \textbf{Média} & \textbf{Desvio-Padrão}\\
+    \hline
+    Árvore de Decisão & 0.7884 & 0.0126\\
+    \hline
+    K-vizinhos mais próximos & 0.7849 & 0.0111 \\
+    \hline
+    \end{tabular}
+    \label{tab_9_1}
+    \end{center}
+\end{table}

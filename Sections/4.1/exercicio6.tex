@@ -1,0 +1,23 @@
+\subsection{Exercício 6}
+Após obtermos os modelos no exercicio 5, pretendemos efetuar uma comparação de resultados onde iremos analisar o erro médio absoluto MAE e a raiz quadrada do erro médio (RMSE) para cada um dos modelos. 
+Recorremos ao método k-fold cross validation, onde analisamos 10 iterações diferentes dos 3 modelos e calculamos o MAE e o RMSE obtendo os valores da seguinte tabela:
+
+\begin{table}[htbp]
+	\caption{Valores MAE e RMSE para cada modelo}
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+        & \textbf{mean} & \textbf{sd}\\
+    \hline
+        Regressão Linear Múltipla & 689.7435 & 14.988614\\
+    \hline
+        Árvore de regressão & 577.3373 & 23.622812\\
+    \hline
+        Rede Neuronal & 274.6485 & 6.292916\\
+    \hline
+    \end{tabular}
+    \label{tab_6}
+    \end{center}
+\end{table}
+
+Analisando os dados obtidos, verificamos que a árvore de regressão e a rede neuronal são os dois melhores modelos.

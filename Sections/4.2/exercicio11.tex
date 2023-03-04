@@ -1,0 +1,27 @@
+\subsection{Exercício 11}
+
+Para finalizar o trabalho, no exercício 11 é nos pedido para efetuar uma comparação dos modelos, árvore de decisão, rede neuronal e K-vizinhos-mais-próximos. A comparação é feita utilizando os critérios de \textit{Accuracy}, \textit{Sensitivity}, \textit{Specificity} e \textit{F1}. Nesse sentido é necessário a obtenção de uma matriz de confusão para cada um dos modelos. A matriz de confusão tem como objetivo permitir quantificar quantos verdadeiros positivos, verdadeiros negativos, falsos positivos e falsos negativos um determinado modelo gerou quando comparado com os dados de teste.
+A nossa abordagem para a obtenção de um resultado mais preciso foi a de fazer dez iterações, onde em cada iteração utilizamos a função \textbf{sample} para recolher uma amostra da nossa população e sobre essa amostra utilizamos a técnica \textbf{hold out} para criar os nossos dados de treino e de testes. De seguida, criamos cada um dos três modelos com os dados de treino, comparamos com os dados de testes, obtemos a matriz de confusão e utilização a matriz de confusão calculamos o resultado para cada medida de desempenho. Os resultados das medidas de desempenho são armazenados numa lista, para no fim fazermos uma média de todos os valores obtidos. Os resultados das médias das medidas de desempenho podem ser observados na tabela \ref{tab_11}.
+
+\begin{table}[htbp]
+\caption{Resultado das medidas de desempenho dos modelos.}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Medida} & \textbf{\textit{Árvore de decisão}}& \textbf{\textit{Rede neuronal}}& \textbf{\textit{K-vizinhos}}\\
+\hline
+Accuracy & 78.72\% & 63.19\% & 88.28\% \\
+\hline
+Specificity & 0.438\% & 0.786\% & 0.958\% \\
+\hline
+Sensitivity & 0.915\% & 0.209\% & 0.605\%\\
+\hline
+F1 & 0.0371 & 0.0119 & 0.0468\\
+\hline
+\end{tabular}
+\label{tab_11}
+\end{center}
+\end{table}
+
+Com os resultados obtidos, podemos determinar que o modelo mais preciso é o K-vizinhos-mais-próximos, seguido pela Árvore de decisão, ficando a Rede neuronal por ultimo no que diz respeito a Accuracy. No que diz respeito a verdadeiros negativos - Specificity, o K-vizinhos-mais-próximos mostrou melhor resultado, seguido da rede neuronal, ficando a Árvore de decisão com a pior previsão. Já para a Sensitivity - identificação dos falso negativos, a Árvore de decisão teve mais sucesso na sua identificação, seguido pelos K-vizinhos-mais-próximos, sendo a rede neuronal a que pior resultado teve.
+Por ultimo, a medida F1, ou a harmonia entre os erros cometidos, sejam eles negativos ou positivos, a Rede neuronal mostrou obter um melhor resultado, seguido pela Árvore de decisão e pelos K-vizinhos-mais-próximos.
